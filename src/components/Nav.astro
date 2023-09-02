@@ -15,26 +15,36 @@ const iconLinks: {
   label: string;
   href: string;
   icon: keyof typeof iconPaths;
+  target: "_blank";
+  rel: "noopener noreferrer" | "noopener";
 }[] = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/lucasaonzo/",
     icon: "linkedin-logo",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     label: "GitHub",
     href: "https://github.com/lucasaonzo",
     icon: "github-logo",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     label: "Email",
     href: "mailto:lucasaonzo@gmail.com",
     icon: "email-logo",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     label: "Resume",
     href: "https://drive.google.com/file/d/1bqqRoCywrk0_9fEt9jw3hCQo3NSwvyW6/view?usp=sharing",
     icon: "resume",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];
 ---
@@ -87,8 +97,13 @@ const iconLinks: {
     <div class="menu-footer">
       <div class="socials">
         {
-          iconLinks.map(({ href, icon, label }) => (
-            <a href={href} class="social">
+          iconLinks.map(({ href, icon, label, target }) => (
+            <a
+              href={href}
+              target={target}
+              rel="noopener noreferrer"
+              class="social"
+            >
               <span class="sr-only">{label}</span>
               <Icon icon={icon} />
             </a>
