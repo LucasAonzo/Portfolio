@@ -1,0 +1,79 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<section class="box skills">
+  <div class="stack gap-2 lg:gap-4">
+    <Icon
+      icon="terminal-window"
+      color="var(--accent-regular)"
+      size="2.5rem"
+      gradient
+    />
+    <h2>Full Stack Web Developer</h2>
+    <p>
+      Full stack developer with advanced experience in front-end technologies
+      such as React, Redux, HTML 5, CSS 3+ and Tailwind. On the back-end, I
+      bring solid knowledge in NodeJS, JavaScript, SQL, and Express.
+    </p>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+    <h2>Outstanding Developer</h2>
+    <p>
+      I have worked on various projects, such as the custom web application for
+      travelers "WANDERLUST" and the "VIDEOGAME PI" website to find video games
+      and their details in the market.
+    </p>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="design" color="var(--accent-regular)" size="2.5rem" gradient />
+    <h2>Designer<br />UX/UI</h2>
+    <p>
+      Expert in UX/UI design. Focused on creating intuitive and attractive user
+      experiences. I have skills in wireframing techniques, information
+      architecture, and mastery of design patterns and content structures.
+    </p>
+  </div>
+</section>
+
+<style>
+  .box {
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .skills h2 {
+    font-size: var(--text-lg);
+  }
+
+  .skills p {
+    color: var(--gray-400);
+  }
+
+  @media (min-width: 50em) {
+    .box {
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+    }
+
+    .skills h2 {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>
